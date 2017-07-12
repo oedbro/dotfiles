@@ -1,0 +1,69 @@
+! Set a nice font
+!xterm*font: terminus-12
+!URxvt.font: terminus-12
+
+!scrollback (scrollable history)
+xterm*savelines: 2048
+URxvt.saveLines: 2048
+
+!Set every shell to be a login shell
+xterm*loginshell: true
+URxvt.loginShell: True
+
+! Double cliclick a word to mark it
+xterm*charClass: 33:48,35:48,43:48,45-47:48,64:48,126:48
+URxvt*cutchars: "`\"'&()*,:;<=>?[\\]^{|}$"
+
+
+! Transparancy
+
+! URxvt*depth: 32
+! URxvt*background: rgba:0000/0000/0200/c800
+urxvt*transparent: true
+urxvt*shading: 30
+
+
+! Colours
+URxvt*background: #002b36
+URxvt*foreground: #657b83
+
+!!*fading: 40
+!*fadeColor: #002b36
+URxvt*CursorColor: #cfcfc2
+URxvt*pointerColorBackground: #232629
+URxvt*pointerColorForeground: #cfcfc2
+
+!!Black
+URxvt*color0: #2a2e32
+URxvt*color8: #31363b
+
+!! red
+URxvt*color1: #c0392b
+URxvt*color9: #f44f4f
+
+!! green
+URxvt*color2: #218058
+URxvt*color10: #27ae60
+
+!! yellow
+URxvt*color3: #fdbc4b
+URxvt*color11: #fca103
+
+!! blue
+URxvt*color4: #2980b9
+URxvt*color12: #0099ff
+
+!! magenta
+URxvt*color5: #8e44ad
+URxvt*color13: #af81ff
+
+!! cyan
+URxvt*color6: #27aeae
+URxvt*color14: #31dddd
+
+!!white
+URxvt*color7: #acada1
+URxvt*color15: #cfd0c2
+
+
+
