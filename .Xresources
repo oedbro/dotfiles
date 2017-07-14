@@ -66,4 +66,8 @@ URxvt*color7: #acada1
 URxvt*color15: #cfd0c2
 
 
-
+!! encoding 
+URxvt.keysym.Home: \033[1~
+URxvt.keysym.End: \033[4~
+URxvt.keysym.KP_Home: \033[1~
+URxvt.keysym.KP_End: \033[4~
