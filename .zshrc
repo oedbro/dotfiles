@@ -23,6 +23,9 @@ insert-sudo() {zle begining-of-line; zle -U "sudo "}
 zle -N insert-sudo
 bindkey "^[d" insert-sudo
 
+# aliases for configs
+alias confzsh="vi ~/.zshrc"
+alias confvim="vi ~/.vimrc"
 
 
 
