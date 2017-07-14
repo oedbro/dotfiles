@@ -26,6 +26,7 @@ bindkey "^[d" insert-sudo
 # aliases for configs
 alias confzsh="vi ~/.zshrc"
 alias confvim="vi ~/.vimrc"
+alias confawesome="vi ~/.config/awesome/rc.lua"
 
 
 
