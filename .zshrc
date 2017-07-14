@@ -25,12 +25,6 @@ bindkey "${terminfo[kend]}" end-of-line
 
 # ctrl s for sudo
 function insert_sudo() { zle beginning-of-line; zle -U "sudo "}
-# function insert-sudo()
-# {
-#    if ($BUFFER != "sudo "*); then
-#        BUFFER="sudo $BUFFER"; CURSOR+=5
-#    fi
-#}
 zle -N insert-sudo insert_sudo
 bindkey "^[d" insert-sudo
 
