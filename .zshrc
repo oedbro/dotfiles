@@ -21,7 +21,7 @@ export EDITOR="vim"
 # alt s for sudo
 insert-sudo() {zle begining-of-line; zle -U "sudo "}
 zle -N insert-sudo
-bindkey "^[s" insert-sudo
+bindkey "^[d" insert-sudo
 
 
 

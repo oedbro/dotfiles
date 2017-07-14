@@ -10,4 +10,7 @@ set number
 " utf-8 encoding
 set encoding=utf-8
 
+"set bell to be visual
+set visualbell
+
 
