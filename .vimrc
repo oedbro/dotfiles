@@ -4,6 +4,9 @@ set tw=79
 " syntax highlighting
 syntax enable
 
+"! Set search to highlight hits
+set hlsearch
+
 " Line numbering
 set number
 
