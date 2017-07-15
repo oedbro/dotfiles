@@ -247,6 +247,10 @@ globalkeys = gears.table.join(
 awful.util.spawn("chromium") end, {description = "Chromium", group =
 "layout"}),
 
+    awful.key({ modkey, "Control" }, "l",       function()
+awful.util.spawn("xscreensaver-command -lock") end, {description = "Lock the \
+screen", group = "awesome"}), 
+
 
     awful.key({ modkey,           }, "j",
         function ()
@@ -572,7 +576,8 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 autorun = true
 autorunApps =
 {
-	"pulseaudio"
+	"pulseaudio",
+    "xscreensaver -no-splash"
 }
 
 if autorun then
