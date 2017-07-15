@@ -11,3 +11,6 @@ Pulseaudio is the audioserver that i use
 ## zsh
 
 ## xserver / xorg
+
+## URxvt
+    URxvt is configured in .Xresources
