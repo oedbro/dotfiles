@@ -4,6 +4,11 @@ set tw=79
 " syntax highlighting
 syntax enable
 
+"! Visualising tabs and trailing whitespaces
+hi whitespace ctermbg=darkgray
+syntax match whitespace /\t/
+syntax match whitespace /\s\+$/
+
 "! Set search to highlight hits
 set hlsearch
 
