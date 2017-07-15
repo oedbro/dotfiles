@@ -244,12 +244,10 @@ globalkeys = gears.table.join(
               {description = "go back", group = "tag"}),
 
     awful.key({ modkey,           }, "b",      function ()
-awful.util.spawn("chromium") end, {description = "Chromium", group =
-"layout"}),
+awful.util.spawn("chromium") end, {description = "Chromium", group ="launcher"}),
 
     awful.key({ modkey, "Control" }, "l",       function()
-awful.util.spawn("xscreensaver-command -lock") end, {description = "Lock the \
-screen", group = "awesome"}), 
+awful.util.spawn("xscreensaver-command -lock") end, {description = "Lockscreen", group = "awesome"}), 
 
 
     awful.key({ modkey,           }, "j",
