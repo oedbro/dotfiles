@@ -4,6 +4,8 @@ local awful = require("awful")
 require("awful.autofocus")
 -- Widget and layout library
 local wibox = require("wibox")
+-- Widget handling
+local vicious = require("vicious")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
@@ -116,6 +118,34 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
+-- BATTERY --
+-- {{{ Battery state
+-- Initialize widget
+batwidget = wibox.widget.textbox()
+-- Register widget
+vicious.register(batwidget, vicious.widgets.bat,
+    function (widget, args)
+        if  args[2] == 100 then
+            return "Bat: <span color='#9acd32'>A/C</span>"
+        elseif  args[2] >= 75 and args[2] < 95 then
+            return "Bat: <span color='#9acd32'>" .. args[2] .. "%</span>"
+        elseif args[2] >= 50 and args[2] < 75 then
+            return "Bat: <span color='#d79b1e'>" .. args[2] .. "%</span>"
+        elseif args[2] >= 20 and args[2] < 50 then
+            return "Bat: <span color='#ff4b4b'>" .. args[2] .. "%</span>"
+        elseif args[2] < 20 and args[1] == "-" then
+            naughty.notify({ title = "Battery Warning", text = "Battery low! "..args[2].."% left!\nBetter get some power.", timeout = 10, position = "top_right", fg = beautiful.fg_urgent, bg = beautiful.bg_urgent })
+            return "Bat: <span color='#ff4b4b'>" .. args[2] .. "%</span>"
+
+        elseif args[2] < 20 then
+            return "Bat: <span color='#ff4b4b'>" .. args[2] .. "%</span>"
+        else
+            return "Bat: <span color='#9acd32'>" .. args[2] .. "%</span>"
+        end
+    end, 67, "BAT1" )
+ 
+-- }}}
+
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
 
@@ -216,6 +246,7 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             mykeyboardlayout,
+            batwidget,
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
@@ -551,6 +582,7 @@ client.connect_signal("request::titlebars", function(c)
             awful.titlebar.widget.stickybutton   (c),
             awful.titlebar.widget.ontopbutton    (c),
             awful.titlebar.widget.closebutton    (c),
+            -- batwidget,
             layout = wibox.layout.fixed.horizontal()
         },
         layout = wibox.layout.align.horizontal
@@ -585,4 +617,4 @@ if autorun then
 end
 
 -- Custom Shortcuts
-   
+
