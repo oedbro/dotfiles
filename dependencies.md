@@ -4,7 +4,9 @@
 When awesome is loaded it autostarts pulseaudio. There are also a functionality
 to lock the screen with xscreensaver (super ctrl l) and Chromeium (super b).
 To use the batery indicator, vicous widget handler is required. It is available
-at github.com/Mic92/vicious
+at github.com/Mic92/vicious. It is also configured to autosart dropbox.
+
+### Dropbox
 
 ### PulseAudio
 Pulseaudio is the audioserver that i use 
