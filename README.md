@@ -11,7 +11,7 @@ at github.com/Mic92/vicious. It is also configured to autosart dropbox.
 ### PulseAudio
 Pulseaudio is the audioserver that i use 
 
-### Chromeium
+### Chromium
 A linux version of google chrome
 
 ### xscreensaver
