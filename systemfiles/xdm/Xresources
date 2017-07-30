@@ -1,0 +1,138 @@
+!
+! Xresources:	Setup the resources used by xdm
+!
+xlogin*login.translations: #override\
+	Alt Ctrl<Key>R:	 abort-display()\n\
+	<Key>F1:	 set-session-argument(failsafe) finish-field()\n\
+	Ctrl<Key>Return: set-session-argument(failsafe) finish-field()\n\
+	<Key>Return:	 set-session-argument()		finish-field()
+
+#undef linux
+#undef Linux
+#undef LINUX
+xlogin*greeting:	Welcome at CLIENTHOST
+xlogin*namePrompt:	Login:\040\040\040\040\040
+xlogin*passwdPrompt:	Password:
+xlogin*fail:		Credential Error
+
+! #define FAMILY	Serif
+! #if    (WIDTH < 800)
+! xlogin*login.failFace:	FAMILY-16:bold
+! xlogin*login.greetFace:	 FAMILY-18:italic
+! xlogin*login.promptFace:    FAMILY-16:bold
+! xlogin*login.Font:	  FAMILY-16
+! #else
+! xlogin*login.failFace:	FAMILY-18:bold
+! xlogin*login.greetFace:	FAMILY-24:italic
+! xlogin*login.promptFace:    FAMILY-18:bold
+! xlogin*login.face:	  FAMILY-18
+! #endif
+! #undef  FAMILY
+
+#define FAMILY AnonymousPro
+#if    (WIDTH < 800)
+xlogin*login.failFace:	FAMILY-10:bold
+xlogin*login.greetFace:	 FAMILY-12:italic
+xlogin*login.promptFace:    FAMILY-10:bold
+xlogin*login.Font:	  FAMILY-10
+#else
+xlogin*login.failFace:	FAMILY-12:bold
+xlogin*login.greetFace:	FAMILY-16:italic
+xlogin*login.promptFace:    FAMILY-12:bold
+xlogin*login.face:	  FAMILY-12
+#endif
+#undef FAMILY
+
+
+
+! #ifdef COLOR
+! xlogin*useShape:		true
+! xlogin*greetColor:		CadetBlue
+! xlogin*failColor:		red
+! *Foreground:			black
+! *Background:			#c0c0c0
+! xlogin*borderWidth:		0
+! xlogin*frameWidth:		5
+! xlogin*innerFramesWidth:	2
+! xlogin*Foreground:		black
+! xlogin*Background:		#c0c0c0
+! xlogin*shdColor:		#828282
+! xlogin*hiColor:			#e0e0e0
+
+#ifdef COLOR
+xlogin*useshape:		true
+xlogin*foreground:		#226e79
+xlogin*background:		#001c20
+xlogin.Login.foreground:	#2f4585
+xlogin.Login.greetColor:	#815901
+xlogin.Login.promptColor:	#815901
+xlogin.Login.failColor:		#813e01
+xlogin.failtimeout:		3
+xlogin.Login.hiColor:		#105964
+xlogin.Login.shdColor:		#013138
+xlogin.Login.frameWidth:	2
+xlogin.Login.innerFrameWidth:	2
+xlogin.Login.sepWidth:		2
+xlogin.Login.echoPasswd: 	false
+#else
+xlogin*useShape:		false
+xlogin*borderWidth:		4
+xlogin*frameWidth:		0
+xlogin*innerFramesWidth:	1
+xlogin*Foreground:		black
+xlogin*Background:		white
+xlogin*shdColor:		black
+xlogin*hiColor:			black
+#endif
+
+
+
+!#if PLANES >= 8
+!xlogin*logoFileName: /etc/X11/xdm/pixmaps/XFree86.xpm
+!#else
+!xlogin*logoFileName: /etc/X11/xdm/pixmaps/XFree86bw.xpm
+!#endif
+!xlogin*logoPadding: 10
+
+#if   (WIDTH < 320)
+XConsole*geometry:	125x80-0-0
+XConsole*font:		5x7
+#elif (WIDTH < 400)
+XConsole*geometry:	130x85-0-0
+XConsole*font:		5x8
+#elif (WIDTH < 640)
+XConsole*geometry:	150x90-0-0
+XConsole*font:		6x9
+#elif (WIDTH < 800)
+XConsole*geometry:	240x95-0-0
+XConsole*font:		6x10
+#elif (WIDTH < 1024)
+XConsole*geometry:	300x100-0-0
+XConsole*font:		6x10
+#elif (WIDTH < 1152)
+XConsole*geometry:	384x110-0-0
+XConsole*font:		6x12
+#elif (WIDTH < 1280)
+XConsole*geometry:	432x120-0-0
+XConsole*font:		6x13
+#else
+XConsole*geometry:	480x130-0-0
+XConsole*font:		7x14
+#endif
+XConsole.verbose:	true
+XConsole*iconic:	true
+XConsole*text.scrollVertical:	WhenNeeded
+XConsole*text.scrollHorizontal:	WhenNeeded
+
+Chooser*geometry:		700x500+300+200
+Chooser*allowShellResize:	false
+Chooser*viewport.forceBars:	true
+Chooser*label.font:		-*-new century schoolbook-bold-i-normal-*-240-*
+Chooser*label.label:		XDMCP Host Menu from CLIENTHOST
+Chooser*list.font:		-*-*-medium-r-normal-*-*-230-*-*-c-*-iso8859-1
+Chooser*Command.font:		-*-new century schoolbook-bold-r-normal-*-180-*
+
+!
+! Include system wide Xresources
+!
+#include "/etc/X11/Xresources"

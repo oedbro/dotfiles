@@ -25,3 +25,8 @@ A tool for handling screensaver and lockscreen
 
 ## URxvt
     URxvt is configured in .Xresources
+
+## XDM
+XDM is used as a login manager, and isn't configured in the home folder.
+Therefore was a new folder created for it and instructions were added where to
+put it. 
