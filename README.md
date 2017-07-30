@@ -20,6 +20,9 @@ A tool for handling screensaver and lockscreen
 ## vim
 
 ## zsh
+    The custom prompt uses zsh-git-prompt
+[https://github.com/olivierverdier/zsh-git-prompt] to show git information in
+the prompt.
 
 ## xserver / xorg
 

@@ -33,5 +33,16 @@ alias confzsh="vi ~/.zshrc"
 alias confvim="vi ~/.vimrc"
 alias confawesome="vi ~/.config/awesome/rc.lua"
 
+# Prompt stuff
+# git prompt for zsh
+source ~/git/zsh-git-prompt/zshrc.sh
+ZSH_THEME_PROMPT_PREFIX=""
+ZSH_THEME_PROMPT_SUFFIX=""
+
+
+# The acctual prompt
+PROMPT='$(git_super_status)
+%F{blue}%n%f%F{white}@%f%F{cyan}%m%f%F{yellow} %~> %f'
+# RPROMPT='$(git_super_status)'
 
 
