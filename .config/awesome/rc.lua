@@ -614,6 +614,7 @@ autorun = true
 autorunApps =
 {
 	"pulseaudio",
+    'setxkbmap -layout "us,se" -option "grp:alt_shift_toggle"',
     "xscreensaver -no-splash",
     "dropbox start"
 }
