@@ -5,6 +5,17 @@ urxvt*letterSpace: -5
 !scrollback (scrollable history)
 xterm*savelines: 2048
 urxvt.saveLines: 2048
+! Don't scroll with output
+urxvt*scrollTtyOutput: false
+! Scroll in relation to buffer
+urxvt*scrollWithBuffer: true
+! Scrollback to botom on keypress
+urxvt*scrollTtyKeypress: true
+! Disable urxvt scrollback in less and vim (use builtin scrollback)
+urxvt*secondaryScreen: 1
+urxvt*secondaryScroll: 0
+! Remove scrollbar
+urxvt*scrollbar: false
 
 !Set every shell to be a login shell
 xterm*loginshell: true
@@ -71,3 +82,6 @@ urxvt.keysym.Home: \033[1~
 urxvt.keysym.End: \033[4~
 urxvt.keysym.KP_Home: \033[1~
 urxvt.keysym.KP_End: \033[4~
+
+! Pearl Extensions
+urxvt.perl-ext-common: default,resize-font
