@@ -45,4 +45,5 @@ PROMPT='$(git_super_status)
 %F{blue}%n%f%F{white}@%f%F{cyan}%m%f%F{yellow} %~> %f'
 # RPROMPT='$(git_super_status)'
 
-
+# dissable beep
+setopt NO_BEEP

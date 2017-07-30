@@ -79,6 +79,10 @@ urxvt*color15: #cfd0c2
 !! Default browser
 urxvt*urlLauncher: chromium
 
+!! Dissable Bell
+urxvt*urgentOnBell: false
+
+
 !! encoding 
 urxvt.keysym.Home: \033[1~
 urxvt.keysym.End: \033[4~
