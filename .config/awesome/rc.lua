@@ -103,8 +103,9 @@ myawesomemenu = {
 }
 
 mysystemmenu = {
-    { "shutdown", 'systemctl shutdown' },
-    { "reboot", 'systemctl reboot'},
+    { "shutdown", 'systemctl poweroff' },
+    { "sleep", 'systemctl hybrid-sleep' },
+    { "reboot", 'systemctl reboot' },
     { "logof", function() awesome.quit() end }
 }
 

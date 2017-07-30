@@ -15,7 +15,7 @@ urxvt*scrollTtyKeypress: true
 urxvt*secondaryScreen: 1
 urxvt*secondaryScroll: 0
 ! Remove scrollbar
-urxvt*scrollbar: false
+urxvt*scrollBar: false
 
 !Set every shell to be a login shell
 xterm*loginshell: true
@@ -76,6 +76,8 @@ urxvt*color14: #31dddd
 urxvt*color7: #acada1
 urxvt*color15: #cfd0c2
 
+!! Default browser
+urxvt*urlLauncher: chromium
 
 !! encoding 
 urxvt.keysym.Home: \033[1~
