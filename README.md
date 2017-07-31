@@ -18,6 +18,8 @@ A linux version of google chrome
 A tool for handling screensaver and lockscreen
 
 ## vim
+I use the Patogen plugin manager, `https://github.com/tpope/vim-pathogen`. This
+allows for easy plugin instalation.
 
 ## zsh
     The custom prompt uses zsh-git-prompt

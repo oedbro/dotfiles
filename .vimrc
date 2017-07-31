@@ -33,9 +33,13 @@ set smarttab
 " set ai            "! Set auto indent
 set si            "! Set smart indent
 filetype indent on
-
+filetype plugin indent on
 
 " set :W to sudo save
 command W w !sudo tee % > /dev/null
+
+" Add pathogen plugin
+" https://github.com/tpope/vim-pathogen
+execute pathogen#infect()
 
 
