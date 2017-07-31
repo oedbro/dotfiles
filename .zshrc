@@ -35,7 +35,7 @@ alias confawesome="vi ~/.config/awesome/rc.lua"
 
 # Prompt stuff
 # git prompt for zsh
-source ~/git/zsh-git-prompt/zshrc.sh
+source ~/git/tools/zsh-git-prompt/zshrc.sh
 ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 
