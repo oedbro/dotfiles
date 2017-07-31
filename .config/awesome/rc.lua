@@ -102,6 +102,10 @@ myawesomemenu = {
    { "quit", function() awesome.quit() end}
 }
 
+webmenu = {
+    { "Chromium", 'chromium' },
+}
+
 mysystemmenu = {
     { "shutdown", 'systemctl poweroff' },
     { "sleep", 'systemctl hybrid-sleep' },
@@ -109,9 +113,11 @@ mysystemmenu = {
     { "logof", function() awesome.quit() end }
 }
 
-mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", terminal },
-                                        { "shutdown" , mysystemmenu }
+mymainmenu = awful.menu({ items = {
+                                  { "shutdown" , mysystemmenu },
+                                  { "Web", webmenu },
+                                  { "awesome", myawesomemenu, beautiful.awesome_icon },
+                                  { "open terminal", terminal },
                                   }
                         })
 
