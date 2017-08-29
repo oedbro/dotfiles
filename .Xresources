@@ -1,11 +1,16 @@
 ! Set a nice font
-urxvt.font: xft:terminus:size=10
-urxvt*letterSpace: -5
+#urxvt.font: xft:Terminus:size=10,xft:adobe:size=10
+#urxvt.font: -*-terminus-medium-r-normal--14-*-*-*-*-*-iso10646-1
+#urxvt.font: -*-roboto mono thin-*-*-normal-*-*-120-*-*-*-*-iso10646-1
+urxvt.font: xft:RobotoMono-Thin:size=11,xft:adobe:size=11
+urxvt*letterSpace: 1
+
+#urxvt*imLocale: en_UK.UTF-8
 
 !scrollback (scrollable history)
 xterm*savelines: 2048
 urxvt.saveLines: 2048
-! Don't scroll with output
+! Dont scroll with output
 urxvt*scrollTtyOutput: false
 ! Scroll in relation to buffer
 urxvt*scrollWithBuffer: true
