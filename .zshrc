@@ -17,6 +17,7 @@ bindkey -v
 
 export EDITOR="vim"
 
+export LANG=en_GB.UTF8
 
 # fix home and end
 
