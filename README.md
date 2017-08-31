@@ -22,9 +22,7 @@ I use the Patogen plugin manager, `https://github.com/tpope/vim-pathogen`. This
 allows for easy plugin instalation.
 
 ## zsh
-    The custom prompt uses zsh-git-prompt
-[https://github.com/olivierverdier/zsh-git-prompt] to show git information in
-the prompt.
+I use oh-my-zsh so the config might look a bit different
 
 ## xserver / xorg
 
