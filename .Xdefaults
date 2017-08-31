@@ -1,98 +1,99 @@
 ! Set a nice font
-#urxvt.font: xft:Terminus:size=10,xft:adobe:size=10
-#urxvt.font: -*-terminus-medium-r-normal--14-*-*-*-*-*-iso10646-1
-#urxvt.font: -*-roboto mono thin-*-*-normal-*-*-120-*-*-*-*-iso10646-1
-urxvt.font: xft:RobotoMono-Thin:size=11,xft:adobe:size=11
-urxvt*letterSpace: 1
+!urxvt.font: xft:Terminus:size=10,xft:adobe:size=10
+!urxvt.font: -*-terminus-medium-r-normal--14-*-*-*-*-*-iso10646-1
+!urxvt.font: -*-roboto mono thin-*-*-normal-*-*-120-*-*-*-*-iso10646-1
+URxvt.font: xft:RobotoMono-Thin:size=11,xft:adobe:size=11
+URxvt*letterSpace: 1
 
-#urxvt*imLocale: en_UK.UTF-8
+!urxvt*imLocale: en_UK.UTF-8
 
 !scrollback (scrollable history)
 xterm*savelines: 2048
-urxvt.saveLines: 2048
+URxvt.saveLines: 2048
 ! Dont scroll with output
-urxvt*scrollTtyOutput: false
+URxvt*scrollTtyOutput: false
 ! Scroll in relation to buffer
-urxvt*scrollWithBuffer: true
+URxvt*scrollWithBuffer: true
 ! Scrollback to botom on keypress
-urxvt*scrollTtyKeypress: true
+URxvt*scrollTtyKeypress: true
 ! Disable urxvt scrollback in less and vim (use builtin scrollback)
-urxvt*secondaryScreen: 1
-urxvt*secondaryScroll: 0
+URxvt*secondaryScreen: 1
+URxvt*secondaryScroll: 0
 ! Remove scrollbar
-urxvt*scrollBar: false
+URxvt*scrollBar: false
 
 !Set every shell to be a login shell
 xterm*loginshell: true
-urxvt.loginShell: True
+URxvt.loginShell: True
 
 ! Double cliclick a word to mark it
 xterm*charClass: 33:48,35:48,43:48,45-47:48,64:48,126:48
-urxvt*cutchars: "`\"'&()*,:;<=>?[\\]^{|}$"
+URxvt*cutchars: "`\"'&()*,:;<=>?[\\]^{|}$"
 
 
 ! Transparancy
 
-! URxvt*depth: 32
-! URxvt*background: rgba:0000/0000/0200/c800
-urxvt*transparent: true
-urxvt*shading: 20
+URxvt*depth: 32
+URxvt*background: rgba:0000/0043/0054/c800
+! URxvt*transparent: true
+! URxvt*shading: 20
 
 
 ! Colours
-urxvt*background: #002b36
-urxvt*foreground: #657b83
+! URxvt*background: #002b36
+URxvt*foreground: #657b83
 
 !!*fading: 40
 !*fadeColor: #002b36
-urxvt*CursorColor: #cfcfc2
-urxvt*pointerColorBackground: #232629
-urxvt*pointerColorForeground: #cfcfc2
+URxvt*CursorColor: #cfcfc2
+URxvt*pointerColorBackground: #232629
+URxvt*pointerColorForeground: #cfcfc2
 
 !!Black
-urxvt*color0: #2a2e32
-urxvt*color8: #31363b
+URxvt*color0: #2a2e32
+URxvt*color8: #31363b
 
 !! red
-urxvt*color1: #c0392b
-urxvt*color9: #f44f4f
+URxvt*color1: #c0392b
+!URxvt*color9: #f44f4f
+URxvt*color9: #f52929
 
 !! green
-urxvt*color2: #218058
-urxvt*color10: #27ae60
+URxvt*color2: #218058
+URxvt*color10: #27ae60
 
 !! yellow
-urxvt*color3: #fdbc4b
-urxvt*color11: #fca103
+URxvt*color3: #fdbc4b
+URxvt*color11: #fca103
 
 !! blue
-urxvt*color4: #2980b9
-urxvt*color12: #0099ff
+URxvt*color4: #2980b9
+URxvt*color12: #0099ff
 
 !! magenta
-urxvt*color5: #8e44ad
-urxvt*color13: #af81ff
+URxvt*color5: #8e44ad
+URxvt*color13: #af81ff
 
 !! cyan
-urxvt*color6: #27aeae
-urxvt*color14: #31dddd
+URxvt*color6: #27aeae
+URxvt*color14: #31dddd
 
 !!white
-urxvt*color7: #acada1
-urxvt*color15: #cfd0c2
+URxvt*color7: #acada1
+URxvt*color15: #cfd0c2
 
 !! Default browser
-urxvt*urlLauncher: chromium
+URxvt*urlLauncher: chromium
 
 !! Dissable Bell
-urxvt*urgentOnBell: false
+URxvt*urgentOnBell: false
 
 
 !! encoding 
-urxvt.keysym.Home: \033[1~
-urxvt.keysym.End: \033[4~
-urxvt.keysym.KP_Home: \033[1~
-urxvt.keysym.KP_End: \033[4~
+URxvt.keysym.Home: \033[1~
+URxvt.keysym.End: \033[4~
+URxvt.keysym.KP_Home: \033[1~
+URxvt.keysym.KP_End: \033[4~
 
 ! Pearl Extensions
-urxvt.perl-ext-common: default,resize-font
+URxvt.perl-ext-common: default,resize-font
