@@ -27,7 +27,7 @@ I use oh-my-zsh so the config might look a bit different
 ## xserver / xorg
 
 ## URxvt
-    URxvt is configured in .Xresources
+    URxvt is configured in .Xdefaults
 
 ## XDM
 XDM is used as a login manager, and isn't configured in the home folder.

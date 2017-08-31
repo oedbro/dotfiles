@@ -99,5 +99,8 @@ alias confzsh="vim ~/.zshrc"
 alias confvim="vim ~/.vimrc"
 alias confsway="vim ~/.config/sway/config"
 
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+    exec sway
+fi
 
 
