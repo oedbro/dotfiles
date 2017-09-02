@@ -186,6 +186,10 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# Set fonts for sway to use
+font xft:RobotoMono-Thin 12px
+
+
 #
 # Status Bar:
 #
