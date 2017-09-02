@@ -59,7 +59,7 @@ output * bg /usr/share/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+d exec $menu
 
     # start your browser
-    bindsym $mod+b exec $browser
+    bindsym $mod+c exec $browser
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -193,6 +193,9 @@ font xft:RobotoMono-Thin 12px
 # Only show borders when showning more than one window
 hide_edge_borders smart
 
+# Autostart
+exec dropbox start
+exec pulseaudio
 
 #
 # Status Bar:

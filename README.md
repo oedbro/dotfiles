@@ -22,6 +22,11 @@ Sway is a wayland wm, and the wm that i exchanged awesome for when updating. I
 changed the browser from chromium to google chrome due to casting issues in
 chromium.
 
+### Dropbox
+
+### PulseAudio
+Pulseaudio is the audioserver that i use 
+
 ## vim
 I use the Patogen plugin manager, `https://github.com/tpope/vim-pathogen`. This
 allows for easy plugin instalation.
