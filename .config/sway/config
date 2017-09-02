@@ -17,6 +17,8 @@ set $right l
 set $term urxvt
 # Your preferred application launcher
 set $menu dmenu_run
+# Your prefered browser
+set $browser google-chrome
 
 ### Output configuration
 #
@@ -55,6 +57,9 @@ output * bg /usr/share/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
     # start your launcher
     bindsym $mod+d exec $menu
+
+    # start your browser
+    bindsym $mod+b exec $browser
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.

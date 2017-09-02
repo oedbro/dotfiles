@@ -17,6 +17,11 @@ A linux version of google chrome
 ### xscreensaver
 A tool for handling screensaver and lockscreen
 
+## sway
+Sway is a wayland wm, and the wm that i exchanged awesome for when updating. I
+changed the browser from chromium to google chrome due to casting issues in
+chromium.
+
 ## vim
 I use the Patogen plugin manager, `https://github.com/tpope/vim-pathogen`. This
 allows for easy plugin instalation.
