@@ -101,8 +101,8 @@ alias confsway="vim ~/.config/sway/config"
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     export XKB_DEFAULT_LAYOUT=gb,se
-    export XKB_DEFAULT_VARUANT=nodeadkeys,
-    export XKB_DEFAULT_OPTION=grp:alt_shift_toggle
+    export XKB_DEFAULT_VARIANT=,nodeadkeys
+    export XKB_DEFAULT_OPTIONS=grp:alt_shift_toggle
     exec sway
 fi
 
