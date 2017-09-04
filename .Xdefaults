@@ -2,7 +2,7 @@
 !urxvt.font: xft:Terminus:size=10,xft:adobe:size=10
 !urxvt.font: -*-terminus-medium-r-normal--14-*-*-*-*-*-iso10646-1
 !urxvt.font: -*-roboto mono thin-*-*-normal-*-*-120-*-*-*-*-iso10646-1
-URxvt.font: xft:RobotoMono-Thin:size=11,xft:adobe:size=11
+URxvt.font: xft:RobotoMono:size=9,xft:adobe:size=11
 URxvt*letterSpace: 1
 
 !urxvt*imLocale: en_UK.UTF-8
@@ -96,4 +96,4 @@ URxvt.keysym.KP_Home: \033[1~
 URxvt.keysym.KP_End: \033[4~
 
 ! Pearl Extensions
-URxvt.perl-ext-common: default,resize-font
+URxvt.perl-ext-common: default
