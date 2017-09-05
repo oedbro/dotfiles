@@ -61,6 +61,10 @@ output * bg /usr/share/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     # start your browser
     bindsym $mod+c exec $browser
 
+    # lock the screen
+    bindsym $mod+Control+l exec swaylock
+    
+    
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
