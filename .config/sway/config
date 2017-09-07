@@ -62,7 +62,7 @@ output * bg /usr/share/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+c exec $browser
 
     # lock the screen
-    bindsym $mod+Control+l exec swaylock
+    bindsym $mod+Control+l exec swaylock -c 050505
     
     
     # Drag floating windows by holding down $mod and left mouse button.
