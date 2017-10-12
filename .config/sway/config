@@ -197,6 +197,9 @@ font xft:RobotoMono-Thin 12px
 # Only show borders when showning more than one window
 hide_edge_borders smart
 
+# Do not show the top bar of windows
+new_window pixel 1
+
 # Autostart
 #exec "xrandr --output XWAYLAND0 --primary"
 #exec --no-startup-id nm-applet
