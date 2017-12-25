@@ -73,8 +73,8 @@ export LANG=en_GB.UTF-8
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-eval $(ssh-agent)
-export SSH_KEY_PATH="~/.ssh/rsa_id"
+#eval $(ssh-agent)
+export SSH_KEY_PATH="~/.ssh/id_rsa"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
