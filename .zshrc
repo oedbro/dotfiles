@@ -107,4 +107,7 @@ alias confsway="vim ~/.config/sway/config"
 #    exec sway
 # fi
 
-
+# Go programing language path
+export GOPATH=$HOME/go
+# Adds the go install to PATH
+export PATH=$PATH:$GOPATH/bin 
