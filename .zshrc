@@ -32,12 +32,12 @@ ZSH_THEME="pygmalion"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -100,11 +100,11 @@ alias confzsh="vim ~/.zshrc"
 alias confvim="vim ~/.vimrc"
 alias confsway="vim ~/.config/sway/config"
 
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-    export XKB_DEFAULT_LAYOUT=gb,se
-    export XKB_DEFAULT_VARIANT=,nodeadkeys
-    export XKB_DEFAULT_OPTIONS=grp:alt_shift_toggle
-    exec sway
-fi
+# if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+#    export XKB_DEFAULT_LAYOUT=gb,se
+#    export XKB_DEFAULT_VARIANT=,nodeadkeys
+#    export XKB_DEFAULT_OPTIONS=grp:alt_shift_toggle
+#    exec sway
+# fi
 
 
