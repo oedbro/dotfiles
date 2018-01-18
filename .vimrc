@@ -35,6 +35,17 @@ let g:rainbow_conf = {
 \	}
 \}
 
+" Syntastic syntax plugin
+Plugin 'vim-syntastic/syntastic'
+"set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -90,18 +101,4 @@ filetype plugin indent on
 " set :W to sudo save
 command W w !sudo tee % > /dev/null
 
-" Add pathogen plugin
-" https://github.com/tpope/vim-pathogen
-"execute pathogen#infect()
-
-" Syntastic syntax plugin
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-"
 
