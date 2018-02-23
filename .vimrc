@@ -101,4 +101,5 @@ filetype plugin indent on
 " set :W to sudo save
 command W w !sudo tee % > /dev/null
 
-
+"! Set vim to use system clipbord
+set clipboard=unnamedplus
