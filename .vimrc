@@ -9,6 +9,7 @@ endif
 
 call plug#begin()
 
+Plug 'bronson/vim-trailing-whitespace'
 
 Plug 'luochen1990/rainbow' " Rainbow parenthesis
 
@@ -30,11 +31,6 @@ set tw=79
 
 " syntax highlighting
 syntax enable
-
-"! Visualising tabs and trailing whitespaces
-hi whitespace ctermbg=darkgray
-syntax match whitespace /\t/
-syntax match whitespace /\s\+$/
 
 "! Set search to highlight hits
 set hlsearch
