@@ -14,6 +14,17 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'luochen1990/rainbow' " Rainbow parenthesis
 
 Plug 'vim-syntastic/syntastic' " Syntastic syntax plugin
+
+Plug 'tpope/vim-fugitive' "git blame
+
+Plug 'airblade/vim-gitgutter' "git diff in vim
+
+Plug 'scrooloose/nerdtree'
+
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug 'PProvost/vim-ps1' "Powershell syntax
+
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 " Brief help
@@ -27,7 +38,12 @@ call plug#end()            " required
 
 
 "! Automatic word wrap
-set tw=79
+" set tw=79
+
+"! Line length highlighter
+set cc=50
+hi ColorColumn ctermbg=234
+let &colorcolumn="60,80,".join(range(100,500),",")
 
 " syntax highlighting
 syntax enable
@@ -61,9 +77,6 @@ filetype plugin indent on
 " set :W to sudo save
 command W w !sudo tee % > /dev/null
 
-"! Set vim to use system clipbord
-set clipboard=unnamedplus
-
 " Rainbow parenthesis config
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 let g:rainbow_conf = {
@@ -90,7 +103,7 @@ let g:rainbow_conf = {
 \}
 
 " Syntastic syntax check plugin
-"set statusline+=%#warningmsg#
+set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
@@ -98,5 +111,50 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ['pylint', 'python']          " OBS Requires pylint
 
+"Automaticly start nerdtree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
+"Auto close nerdtree if it is the only thing open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+"Ctrl t for togling nerdtree
+map <C-t> :NERDTreeToggle<CR>
+
+"Ctrl b for git blame
+map <C-b> :Gblame<CR>
+
+" Ctrl n pretify json
+map <C-n> :%!jq .<CR>
+
+" Ctrl m unpretify json
+map <C-m> :%!jq -c .<CR>
+
+" Ctrl j toggle linenumber
+function! LineNumToggle()
+    if &number
+        set nonumber
+        GitGutterSignsDisable
+    else
+        set number
+        GitGutterSignsEnable
+    endif
+endfunction
+
+map <C-j> :call LineNumToggle()<CR>
+
+" Habit breaking stuf
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+
+" Allow mouse in vim
+" set mouse=nvc
+
+"! Set vim to use system clipbord
+set clipboard=unnamedplus
 
