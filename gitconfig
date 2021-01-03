@@ -1,0 +1,7 @@
+[user]
+        email = oskar@edbro.se
+        name = Oskar Edbro
+[pull]
+        rebase = true
+[alias]
+        lg = log --color --graph --pretty=format:'%Cred%h%Creset - %s %n%Cgreen(%cr) %C(bold blue)<%an>%Creset %C(yellow)%d%Creset %n%C(bold blue)%GS%Creset %C(yellow)%G?%Creset %C(blue)<%GF>%Creset' --abbrev-commit
